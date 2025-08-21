@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <div class="row g-0">
+            <!-- Columna azul -->
+            <div class=" d-none col-md-8 bg-primary d-md-flex justify-content-center align-items-center vh-100"></div>
+
+            <!-- Columna formulario -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center vh-100 ">
+                <div class=" p-4  rounded-4" style="width: 80%">
+                    <h4 class="text-start mb-4">Iniciar Sesión</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input type="text" id="usuario" class="form-control">
+                            <div class="text-danger small ">Usuario inválido</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" id="password" class="form-control">
+                            <div class="text-danger small ">Contraseña inválida</div>
+                        </div>
+                        <button class="btn btn-primary w-100 rounded-3">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+</html>
