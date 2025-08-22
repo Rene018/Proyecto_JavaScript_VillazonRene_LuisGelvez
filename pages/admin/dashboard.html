@@ -1,11 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
-    
+
+<body class="bg-light">
+
+    <!-- Navbar con botón hamburguesa -->
+    <nav class="navbar navbar-light bg-white border-bottom d-md-none">
+        <div class="container-fluid">
+            <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <i class="bi bi-list"></i>
+            </button>
+            <span class="navbar-brand fw-bold">LMS Portal</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar fijo en pantallas md+ -->
+            <nav class="col-md-3 col-lg-2 d-none d-md-block bg-white border-end position-fixed top-0 start-0 h-100">
+                <div class="d-flex flex-column h-100 p-3">
+                    <h5 class="fw-bold">LMS Portal</h5>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-folder me-2"></i>
+                                Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-journal-check me-2"></i> Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-gear me-2"></i>
+                                Configuración</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="https://via.placeholder.com/40" alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Offcanvas en móviles -->
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">LMS Portal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column text-muted">
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-folder me-2"></i>
+                                Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-journal-check me-2"></i> Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-gear me-2"></i>
+                                Configuración</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="https://via.placeholder.com/40" alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 px-4 py-4">
+                <h6 class="text-muted fs-3">Bienvenido al Panel Administrador</h6>
+                <h2 class="fw-bold fs-1">Dashboard</h2>
+                <div class="row mt-4">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card shadow-sm">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-3 text-center">
+                                    <i class="bi bi-book fs-1 text-primary"></i>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cursos activos</h5>
+                                        <p class="card-text"><strong>8</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card shadow-sm">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-3 text-center">
+                                    <i class="bi bi-people fs-1 text-primary"></i>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Docentes Activos</h5>
+                                        <p class="card-text"><strong>8</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card shadow-sm">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-3 text-center">
+
+                                    <i class="bi bi-people fs-1 text-primary"></i>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Estudiantes Activos</h5>
+                                        <p class="card-text"><strong>8</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="fw-semibold mt-3">Acciones Rapidas</h2>
+                <div class="row mt-4">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card shadow-sm py-2">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-3 text-center">
+                                    <i class="bi bi-people fs-1 text-primary"></i>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title my-1">Estudiantes Activos</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card shadow-sm py-2">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-3 text-center">
+
+                                    <i class="bi bi-people fs-1 text-primary"></i>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title my-1">Estudiantes Activos</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card shadow-sm py-2">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-3 text-center">
+
+                                    <i class="bi bi-people fs-1 text-primary"></i>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title my-1">Estudiantes Activos</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
