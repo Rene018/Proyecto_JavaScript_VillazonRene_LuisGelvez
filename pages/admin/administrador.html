@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar con botón hamburguesa -->
+    <nav class="navbar navbar-light bg-white border-bottom d-md-none">
+        <div class="container-fluid">
+            <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <i class="bi bi-list"></i>
+            </button>
+            <span class="navbar-brand fw-bold">LMS Portal</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar-->
+            <nav class="col-md-3 col-lg-2 d-none d-md-block bg-white border-end position-fixed top-0 start-0 h-100">
+                <div class="d-flex flex-column h-100 p-3">
+                    <h5 class="fw-bold">LMS Portal</h5>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="./dashboard.html"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./cursos.html"><i
+                                    class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-folder me-2"></i>
+                                Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-journal-check me-2"></i> Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-gear me-2"></i>
+                                Configuración</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="." alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Offcanvas en móviles -->
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">LMS Portal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column text-muted">
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="./dashboard.html"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./cursos.html"><i
+                                    class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-folder me-2"></i>
+                                Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-journal-check me-2"></i> Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-gear me-2"></i>
+                                Configuración</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="." alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 px-4 py-4">
+                <!-- Título -->
+                <h2 class="fw-bold">Configuración</h2>
+                <p class="text-muted">Administra la configuración general de la plataforma LMS</p>
+
+                <!-- Tabs -->
+                <ul class="nav nav-pills nav-justified mb-3">
+                    <li class="nav-item">
+                        <button class="nav-link bg-light text-muted active" data-bs-toggle="tab"
+                            data-bs-target="#general">General</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-light text-muted" data-bs-toggle="tab"
+                            data-bs-target="#usuarios">Usuarios</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-light text-muted" data-bs-toggle="tab"
+                            data-bs-target="#seguridad">Seguridad</button>
+                    </li>
+
+                </ul>
+                <!-- Contenido de los tabs -->
+                <div class="tab-content">
+                    <!-- General -->
+                    <div class="tab-pane fade show active" id="general">
+                        <h5 class="fw-bold">Configuración General</h5>
+                        <p class="text-muted">Organiza lecciones y material de aprendizaje</p>
+
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre de la Plataforma</label>
+                                <input type="text" class="form-control" value="LMS - Universidad Nacional">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">URL de la Plataforma</label>
+                                <input type="text" class="form-control" value="https://universidadlms.com">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Descripción</label>
+                                <textarea class="form-control"
+                                    rows="2">Sistema de aprendizaje de la universidad Nacional</textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Email del Administrador</label>
+                                <input type="email" class="form-control" value="admin.edulms@example.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email de Soporte</label>
+                                <input type="email" class="form-control" value="Soporte@alumns.com">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Zona Horaria</label>
+                                <select class="form-select">
+                                    <option selected>América-Bogota (UTC-5)</option>
+                                    <option>América-México (UTC-6)</option>
+                                    <option>Europa-Madrid (UTC+1)</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 d-flex justify-content-between mt-4">
+                                <button type="button" class="btn btn-outline-secondary">Subir Logo</button>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="usuarios">
+                        <div class="d-flex mb-3 gap-2">
+                            <input type="text" class="form-control" placeholder="Buscar Usuario">
+                            <select class="form-select" style="max-width:150px;">
+                                <option value="">Tipo</option>
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Docente">Docente</option>
+                            </select>
+                            <button class="btn btn-outline-secondary">Filtrar</button>
+                        </div>
+
+                        <!-- Tabla -->
+                        <table class="table table-bordered">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>ID Usuario</th>
+                                    <th>Tipo</th>
+                                    <th>Última Actividad</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>María González</td>
+                                    <td>STU001</td>
+                                    <td>Estudiante</td>
+                                    <td>2024-03-10</td>
+                                    <td>
+                                        <i class="bi bi-eye " data-bs-toggle="modal"
+                                            data-bs-target="#verUsuarioModal"></i>
+                                        <i class="bi bi-pencil" data-bs-toggle="modal"
+                                            data-bs-target="#editarUsuarioModal"></i>
+                                        <i class="bi bi-trash" data-bs-toggle="modal"
+                                            data-bs-target="#eliminarUsuarioModal"></i>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <!-- Botón agregar -->
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#agregarUsuarioModal">Agregar usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+        <!-- Agregar Usuario -->
+        <div class="modal fade" id="agregarUsuarioModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="agregarUsuarioLabel">Agregar Nuevo Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="modal-body">
+                        <form id="formAgregarUsuario" class="row g-3">
+
+                            <!-- Información del usuario -->
+                            <h6 class="mb-2">Información del Usuario</h6>
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" placeholder="Juan Pérez">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Correo Electrónico *</label>
+                                <input type="email" class="form-control" placeholder="juan.perez@university.edu">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Número de Teléfono *</label>
+                                <input type="text" class="form-control" placeholder="+57 300 123 4567">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Dirección *</label>
+                                <input type="text" class="form-control" placeholder="Cra 45 #23-10">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Título Académico</label>
+                                <input type="text" class="form-control" placeholder="Licenciatura, Maestría...">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de Usuario *</label>
+                                <select class="form-select">
+                                    <option selected disabled>Seleccionar...</option>
+                                    <option>Estudiante</option>
+                                    <option>Profesor</option>
+                                    <option>Administrador</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" form="formAgregarUsuario" class="btn btn-primary">Guardar Usuario</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- VER USUARIO -->
+        <div class="modal fade" id="verUsuarioModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detalles del Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <h6 class="mb-2">Información del Usuario</h6>
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" value="Juan Pérez" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" value="juan.perez@university.edu" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Número de Teléfono</label>
+                                <input type="text" class="form-control" value="+57 300 123 4567" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Dirección</label>
+                                <input type="text" class="form-control" value="Cra 45 #23-10" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Título Académico</label>
+                                <input type="text" class="form-control" value="Maestría" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de Usuario</label>
+                                <input type="text" class="form-control" value="Profesor" disabled>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDITAR USUARIO -->
+        <div class="modal fade" id="editarUsuarioModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form id="formEditarUsuario" class="row g-3">
+                            <h6 class="mb-2">Información del Usuario</h6>
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" value="Juan Pérez">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Correo Electrónico *</label>
+                                <input type="email" class="form-control" value="juan.perez@university.edu">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Número de Teléfono *</label>
+                                <input type="text" class="form-control" value="+57 300 123 4567">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Dirección *</label>
+                                <input type="text" class="form-control" value="Cra 45 #23-10">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Título Académico</label>
+                                <input type="text" class="form-control" value="Maestría">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de Usuario *</label>
+                                <select class="form-select">
+                                    <option>Estudiante</option>
+                                    <option selected>Profesor</option>
+                                    <option>Administrador</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" form="formEditarUsuario" class="btn btn-primary">Actualizar
+                            Usuario</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ELIMINAR USUARIO -->
+        <div class="modal fade" id="eliminarUsuarioModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Eliminar Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>¿Estás seguro de que deseas eliminar al usuario <strong>Juan Pérez</strong>? Esta acción no
+                            se puede deshacer.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
