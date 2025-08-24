@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ver modulo0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="">
+
+    <!-- Navbar hamburguesa -->
+    <nav class="navbar navbar-light bg-white border-bottom d-md-none">
+        <div class="container-fluid">
+            <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <i class="bi bi-list"></i>
+            </button>
+            <span class="navbar-brand fw-bold">LMS Portal</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar-->
+            <nav class="col-md-3 col-lg-2 d-none d-md-block bg-white border-end position-fixed top-0 start-0 h-100">
+                <div class="d-flex flex-column h-100 p-3">
+                    <h5 class="fw-bold">LMS Portal</h5>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="./dashboard.html"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./cursos.html"><i
+                                    class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-folder me-2"></i>
+                                Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-journal-check me-2"></i> Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-gear me-2"></i>
+                                Configuración</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="." alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Offcanvas -->
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">LMS Portal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column text-muted">
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="./dashboard.html"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./cursos.html"><i
+                                    class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-folder me-2"></i>
+                                Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-journal-check me-2"></i> Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i class="bi bi-gear me-2"></i>
+                                Configuración</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="#"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="" alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 px-4 py-4">
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <h2 class="fw-bold">Desarrollo Web con React</h2>
+                        <p class="text-muted">Vista detallada del Curso</p>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3">
+                    <li class="nav-item">
+                        <button class="nav-link text-muted active" data-bs-toggle="tab"
+                            data-bs-target="#general">General</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-muted" data-bs-toggle="tab"
+                            data-bs-target="#estudiante">Estudiante</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-muted" data-bs-toggle="tab"
+                            data-bs-target="#modulos">Módulos</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-muted" data-bs-toggle="tab"
+                            data-bs-target="#evaluaciones">Evaluaciones</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-muted" data-bs-toggle="tab"
+                            data-bs-target="#calificaciones">Calificaciones</button>
+                    </li>
+                </ul>
+
+                <!-- Contenido de Tabs -->
+                <div class="tab-content">
+
+                    <!-- General -->
+                    <div class="tab-pane fade show active" id="general">
+                        <div class="row">
+                            <!-- Información del curso -->
+                            <div class="col-lg-8 mb-4">
+                                <div class="card shadow-sm border-0">
+                                    <div class="card-body">
+                                        <h2 class="h5 fw-bold text-dark mb-3">Información del curso</h2>
+                                        <p class="text-muted mb-4">
+                                            Aprende a desarrollar aplicaciones web modernas con React, incluyendo
+                                            hooks,
+                                            context, routing y mejores prácticas de desarrollo.
+                                        </p>
+
+                                        <!-- Objetivos -->
+                                        <h3 class="h6 fw-semibold text-secondary mb-3">Objetivos de Aprendizaje</h3>
+                                        <ul class="list-unstyled text-muted mb-4">
+                                            <li class="mb-2">Dominar
+                                                los conceptos principales de React</li>
+                                            <li class="mb-2">Implementar
+                                                hooks
+                                                y
+                                                context para manejo de estado</li>
+                                            <li class="mb-2">Crear
+                                                aplicaciones responsive y accesibles</li>
+                                            <li></i>Aplicar
+                                                mejores
+                                                prácticas de desarrollo frontend</li>
+                                        </ul>
+
+                                        <!-- Tags -->
+                                        <div>
+                                            <span class="badge bg-primary-subtle text-primary me-2">React</span>
+                                            <span class="badge bg-warning-subtle text-warning me-2">JavaScript</span>
+                                            <span class="badge bg-secondary text-white">Frontend</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modulos -->
+                                <div class="card shadow-sm border-0 mt-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold mb-3">Módulos</h5>
+
+                                        <div class="list-group">
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Introducción al Desarrollo Web Moderno
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Fundamentos de React
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Componentes en React
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Estado y Ciclo de Vida
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Eventos y Manejo de Formularios
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Estilos en React
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Estadísticas y Detalles -->
+                            <div class="col-lg-4">
+                                <!-- Estadísticas -->
+                                <div class="card shadow-sm border-0 mb-4">
+                                    <div class="card-body">
+                                        <h3 class="h6 fw-bold text-dark mb-3">Estadísticas</h3>
+                                        <ul class="list-unstyled mb-0 text-muted">
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span>Estudiantes</span>
+                                                <span class="fw-bold text-dark">45</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span>Activos</span>
+                                                <span class="fw-bold text-dark">42</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span>Lecciones</span>
+                                                <span class="fw-bold text-dark">39</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <span>Módulos</span>
+                                                <span class="fw-bold text-dark">39</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Detalles -->
+                                <div class="card shadow-sm border-0">
+                                    <div class="card-body">
+                                        <h3 class="h6 fw-bold text-dark mb-3">Detalles</h3>
+                                        <p class="mb-2"><span class="fw-semibold">Categoría:</span> Programación</p>
+                                        <p class="mb-2"><span class="fw-semibold">Docente:</span> Dra. Ana García
+                                        </p>
+                                        <p><span class="fw-semibold">Duración:</span> 12 Semanas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estudiante -->
+                    <div class="tab-pane fade" id="estudiante">
+                        <!-- Boton-->
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-outline-secondary btn-sm">Agregar Estudiante al Curso</button>
+                        </div>
+
+                        <!-- Buscador -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Buscar Estudiantes">
+                        </div>
+
+                        <!-- Tabla -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Actividades</th>
+                                        <th>Progreso</th>
+                                        <th>Última Actividad</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>María González</td>
+                                        <td>
+                                            15 Cumplidas <br>
+                                            5 Pendientes <br>
+                                            <span class="text-danger">2 Retrasadas</span>
+                                        </td>
+                                        <td>78%</td>
+                                        <td>2024-03-10</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carlos Ruiz</td>
+                                        <td>
+                                            12 Cumplidas <br>
+                                            3 Pendientes <br>
+                                            <span class="text-danger">1 Retrasada</span>
+                                        </td>
+                                        <td>85%</td>
+                                        <td>2024-03-12</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ana Lopez</td>
+                                        <td>
+                                            22 Cumplidas <br>
+                                            8 Pendientes <br>
+                                            <span class="text-danger">0 Retrasadas</span>
+                                        </td>
+                                        <td>92%</td>
+                                        <td>2024-03-11</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pedro Martín</td>
+                                        <td>
+                                            5 Cumplidas <br>
+                                            7 Pendientes <br>
+                                            <span class="text-danger">3 Retrasadas</span>
+                                        </td>
+                                        <td>78%</td>
+                                        <td>2024-02-28</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Módulos -->
+                    <div class="tab-pane fade" id="modulos">
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-outline-secondary btn-sm">Agregar Contenido al Curso</button>
+                        </div>
+
+
+                        <!-- Buscador -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Buscar Modulo">
+                        </div>
+
+                        <!-- Tabla de módulos -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover">
+                                <thead class="table-light text-center">
+                                    <tr>
+                                        <th>Contenido</th>
+                                        <th>Tipo</th>
+                                        <th>Duración</th>
+                                        <th>Última Actualización</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td class="">Introducción a React</td>
+                                        <td><span class="text-muted">Sesión</span></td>
+                                        <td>15 Minutos</td>
+                                        <td>2024-03-10</td>
+                                        <td>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-danger p-1"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">Conceptos básicos</td>
+                                        <td><span class="text-muted">Sesión</span></td>
+                                        <td>20 Minutos</td>
+                                        <td>2024-03-12</td>
+                                        <td>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-danger p-1"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">Manejo de eventos y listas</td>
+                                        <td><span class="text-muted">Sesión</span></td>
+                                        <td>12 Minutos</td>
+                                        <td>2024-03-08</td>
+                                        <td>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-danger p-1"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">Hooks esenciales</td>
+                                        <td><span class="text-muted">Documento</span></td>
+                                        <td>-</td>
+                                        <td>2024-02-02</td>
+                                        <td>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-danger p-1"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Evaluaciones -->
+                    <div class="tab-pane fade" id="evaluaciones">
+
+                        <!-- Boton-->
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-outline-secondary btn-sm">Agregar Evaluación</button>
+                        </div>
+
+                        <!-- Buscador -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Buscar Examen o Tarea">
+                        </div>
+
+                        <!-- Tabla Evaluaciones -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Evaluación</th>
+                                        <th>Tipo</th>
+                                        <th>Fecha Límite</th>
+                                        <th>Entregas</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Proyecto Final React</td>
+                                        <td>Tarea</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Examen Parcial JavaScript</td>
+                                        <td>Examen</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Práctica Node.js API</td>
+                                        <td>Tarea</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quiz Base de Datos</td>
+                                        <td>Quiz</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Calificaciones -->
+                    <div class="tab-pane fade" id="calificaciones">
+
+                        <!-- Buscador -->
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Buscar Estudiante">
+                            </div>
+                        </div>
+
+                        <!-- Tabla de Calificaciones -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Nota 1</th>
+                                        <th>Nota 2</th>
+                                        <th>Nota 3</th>
+                                        <th>Promedio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>María Lopez</td>
+                                        <td>85</td>
+                                        <td>85</td>
+                                        <td>85</td>
+                                        <td><span class="badge bg-success">85</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan Pérez</td>
+                                        <td>90</td>
+                                        <td>80</td>
+                                        <td>88</td>
+                                        <td><span class="badge bg-primary">86</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ana Torres</td>
+                                        <td>78</td>
+                                        <td>85</td>
+                                        <td>80</td>
+                                        <td><span class="badge bg-warning text-dark">81</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carlos Ruiz</td>
+                                        <td>95</td>
+                                        <td>92</td>
+                                        <td>90</td>
+                                        <td><span class="badge bg-success">92</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
