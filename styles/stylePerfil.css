@@ -1,0 +1,59 @@
+.fondoAlto {
+    position: relative;
+    background-image: linear-gradient(to right, rgba(51, 139, 199, 1), rgba(44, 67, 88, 1));
+    width: 70%;
+    height: 200px;
+    left: 23%;
+}
+
+.circulo {
+    position: absolute;
+    background: lightgrey;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 125px;
+    border: 5px solid white;
+}
+
+.name{
+    position: relative;
+    left: 51%;
+    top: 70px;
+}
+
+.profesion{
+    position: relative;
+    left: 48%;
+    top: 60px;
+}
+
+.content{
+    position: relative;
+    background-color: lightgray;
+    top: 100px;
+    width: 70%;
+    height: 800px;
+    left: 23%;
+}
+
+.content1{
+    position: relative;
+    background-color: rgba(250, 248, 249, 1);
+    top: 100px;
+    width: 90%;
+    height: 300px;
+    left: 5%;
+    border-radius: 10px;
+}
+
+.content2{
+    position: relative;
+    background-color: rgba(250, 248, 249, 1);
+    top: 150px;
+    width: 90%;
+    height: 300px;
+    left: 5%;
+    border-radius: 10px;
+}
