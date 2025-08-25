@@ -19,7 +19,10 @@
             <div class="col-md-4 d-flex justify-content-center align-items-center vh-100 ">
                 <div class=" p-4  rounded-4" style="width: 80%">
                     <h4 class="text-start mb-4">Iniciar Sesión</h4>
-                    <form>
+                    <form id="formLogin" class="">
+                        <div class="mb-3">
+                            <div id="userIcon" class="text-danger small d-none">Usuario o Contraseña Incorrecto</div>
+                        </div>
                         <div class="mb-3">
                             <label for="usuario" class="form-label">Usuario</label>
                             <input type="text" id="usuario" class="form-control">
@@ -30,7 +33,7 @@
                             <input type="password" id="password" class="form-control">
                             <div class="text-danger small  d-none">Contraseña inválida</div>
                         </div>
-                        <button class="btn btn-primary w-100 rounded-3">Iniciar Sesión</button>
+                        <input class="btn btn-primary w-100 rounded-3" type="submit" value="Iniciar Sesión">
                     </form>
                 </div>
             </div>
@@ -42,6 +45,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
-    <script src="./scripts/mainLogin.js"></script>
+<script src="./scripts/mainLogin.js"></script>
 
 </html>
