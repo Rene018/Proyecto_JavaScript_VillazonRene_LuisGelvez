@@ -47,3 +47,6 @@ document.getElementById("addPreguntaBtn").addEventListener("click", () => {
 
   preguntasDiv.appendChild(nuevaPregunta);
 });
+
+//https://68abc0057a0bbe92cbb82d40.mockapi.io/lms/users
+//https://68abc0057a0bbe92cbb82d40.mockapi.io/lms/cursos

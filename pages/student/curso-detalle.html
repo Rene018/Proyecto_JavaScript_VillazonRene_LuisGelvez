@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="">
+
+    <!-- Navbar hamburguesa -->
+    <nav class="navbar navbar-light bg-white border-bottom d-md-none">
+        <div class="container-fluid">
+            <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <i class="bi bi-list"></i>
+            </button>
+            <span class="navbar-brand fw-bold">LMS Portal</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar-->
+            <nav class="col-md-3 col-lg-2 d-none d-md-block bg-white border-end position-fixed top-0 start-0 h-100">
+                <div class="d-flex flex-column h-100 p-3">
+                    <h5 class="fw-bold">LMS Portal</h5>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="./dashboard.html"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./cursos.html"><i
+                                    class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./administrador.html"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="." alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Offcanvas en móviles -->
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">LMS Portal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column text-muted">
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a class="nav-link text-body" href="./dashboard.html"><i
+                                    class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./cursos.html"><i
+                                    class="bi bi-book me-2"></i>
+                                Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-body" href="./administrador.html"><i
+                                    class="bi bi-person-gear me-2"></i> Administrador</a></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="." alt="user" class="rounded-circle me-2">
+                                <div>
+                                    <small class="fw-bold">Jon Doe</small><br>
+                                    <small class="text-muted">JonDoe@correo.com</small>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>
+                                        Salir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 px-4 py-4">
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <h2 class="fw-bold">Desarrollo Web con React</h2>
+                        <p class="text-muted">Vista detallada del Curso</p>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-pills nav-justified mb-3 ">
+                    <li class="nav-item">
+                        <button class="nav-link bg-light text-muted active" data-bs-toggle="tab"
+                            data-bs-target="#general">General</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-light text-muted" data-bs-toggle="tab"
+                            data-bs-target="#estudiante">Estudiante</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-light  text-muted" data-bs-toggle="tab"
+                            data-bs-target="#modulos">Módulos</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-light  text-muted" data-bs-toggle="tab"
+                            data-bs-target="#evaluaciones">Evaluaciones</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-light  text-muted" data-bs-toggle="tab"
+                            data-bs-target="#calificaciones">Calificaciones</button>
+                    </li>
+                </ul>
+
+                <!-- Contenido de Tabs -->
+                <div class="tab-content">
+
+                    <!-- General -->
+                    <div class="tab-pane fade show  active" id="general">
+                        <div class="row">
+                            <!-- Información del curso -->
+                            <div class="col-lg-8 mb-4">
+                                <div class="card shadow-sm border-0">
+                                    <div class="card-body">
+                                        <h2 class="h5 fw-bold text-dark mb-3">Información del curso</h2>
+                                        <p class="text-muted mb-4">
+                                            Aprende a desarrollar aplicaciones web modernas con React, incluyendo
+                                            hooks,
+                                            context, routing y mejores prácticas de desarrollo.
+                                        </p>
+
+                                        <!-- Objetivos -->
+                                        <h3 class="h6 fw-semibold text-secondary mb-3">Objetivos de Aprendizaje</h3>
+                                        <ul class="list-unstyled text-muted mb-4">
+                                            <li class="mb-2">Dominar
+                                                los conceptos principales de React</li>
+                                            <li class="mb-2">Implementar
+                                                hooks
+                                                y
+                                                context para manejo de estado</li>
+                                            <li class="mb-2">Crear
+                                                aplicaciones responsive y accesibles</li>
+                                            <li></i>Aplicar
+                                                mejores
+                                                prácticas de desarrollo frontend</li>
+                                        </ul>
+
+                                        <!-- Tags -->
+                                        <div>
+                                            <span class="badge bg-secondary text-white me-2">React</span>
+                                            <span class="badge bg-secondary text-white me-2">JavaScript</span>
+                                            <span class="badge bg-secondary text-white">Frontend</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modulos -->
+                                <div class="card shadow-sm border-0 mt-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold mb-3">Módulos</h5>
+
+                                        <div class="list-group">
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Introducción al Desarrollo Web Moderno
+                                                <i class="bi bi-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#verLeccionModal"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Fundamentos de React
+                                                <i class="bi bi-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#verLeccionModal"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Componentes en React
+                                                <i class="bi bi-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#verLeccionModal"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Estado y Ciclo de Vida
+                                                <i class="bi bi-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#verLeccionModal"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Eventos y Manejo de Formularios
+                                                <i class="bi bi-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#verLeccionModal"></i>
+                                            </a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                Estilos en React
+                                                <i class="bi bi-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#verLeccionModal"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal ejemplo -->
+                                <div class="modal fade" id="modalModulo1" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content border-0 shadow">
+                                            <div class="modal-header bg-primary text-white">
+                                                <h5 class="modal-title">Introducción al Desarrollo Web Moderno</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                    data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Aquí puedes ver el contenido o descripción del módulo <b>Introducción al
+                                                    Desarrollo Web Moderno</b>.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Estadísticas y Detalles -->
+                            <div class="col-lg-4">
+                                <!-- Estadísticas -->
+                                <div class="card shadow-sm border-0 mb-4">
+                                    <div class="card-body">
+                                        <h3 class="h6 fw-bold text-dark mb-3">Estadísticas</h3>
+                                        <ul class="list-unstyled mb-0 text-muted">
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span>Estudiantes</span>
+                                                <span class="fw-bold text-dark">45</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span>Activos</span>
+                                                <span class="fw-bold text-dark">42</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between mb-2">
+                                                <span>Lecciones</span>
+                                                <span class="fw-bold text-dark">39</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <span>Módulos</span>
+                                                <span class="fw-bold text-dark">39</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Detalles -->
+                                <div class="card shadow-sm border-0">
+                                    <div class="card-body">
+                                        <h3 class="h6 fw-bold text-dark mb-3">Detalles</h3>
+                                        <p class="mb-2"><span class="fw-semibold">Categoría:</span> Programación</p>
+                                        <p class="mb-2"><span class="fw-semibold">Docente:</span> Dra. Ana García
+                                        </p>
+                                        <p><span class="fw-semibold">Duración:</span> 12 Semanas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estudiante -->
+                    <div class="tab-pane fade" id="estudiante">
+                        <!-- Boton-->
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#modalAlumnos">
+                                Agregar Estudiante al Curso
+                            </button>
+                        </div>
+
+                        <!-- Buscador -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Buscar Estudiantes">
+                        </div>
+
+                        <!-- Tabla -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Actividades</th>
+                                        <th>Progreso</th>
+                                        <th>Última Actividad</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>María González</td>
+                                        <td>
+                                            15 Cumplidas <br>
+                                            5 Pendientes <br>
+                                            <span class="text-danger">2 Retrasadas</span>
+                                        </td>
+                                        <td>78%</td>
+                                        <td>2024-03-10</td>
+
+                                        <td>
+
+                                            <i class="bi bi-eye me-2 text-black" role="button" data-bs-toggle="modal"
+                                                data-bs-target="#modalVer"></i>
+
+                                            <i class="bi bi-pencil-square me-2 text-black" role="button"
+                                                data-bs-toggle="modal" data-bs-target="#modalEditar"></i>
+
+                                            <i class="bi bi-trash text-black" role="button" data-bs-toggle="modal"
+                                                data-bs-target="#modalEliminar"></i>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Módulos -->
+                    <div class="tab-pane fade" id="modulos">
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#crearModuloModal">Agregar Contenido al Curso</button>
+                        </div>
+
+
+                        <!-- Buscador -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Buscar Modulo">
+                        </div>
+
+                        <!-- Tabla de módulos -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover">
+                                <thead class="table-light text-center">
+                                    <tr>
+                                        <th>Contenido</th>
+                                        <th>Tipo</th>
+                                        <th>Duración</th>
+                                        <th>Última Actualización</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td class="">Introducción a React</td>
+                                        <td><span class="text-muted">Sesión</span></td>
+                                        <td>15 Minutos</td>
+                                        <td>2024-03-10</td>
+                                        <td>
+                                            <button class="btn btn-link text-dark p-1 " data-bs-toggle="modal"
+                                                data-bs-target="#verLeccionModal"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-link text-dark p-1"><i
+                                                    class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-black p-1"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Evaluaciones -->
+                    <div class="tab-pane fade" id="evaluaciones">
+
+                        <!-- Boton-->
+                        <div class="row">
+                            <div class="d-flex justify-content-end mb-3 gap-2">
+
+                                <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalTarea">
+                                    Agregar Tarea
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#examenModal">
+                                    Agregar Evaluación
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <!-- Buscador -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Buscar Examen o Tarea">
+                        </div>
+
+                        <!-- Tabla Evaluaciones -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Evaluación</th>
+                                        <th>Tipo</th>
+                                        <th>Fecha Límite</th>
+                                        <th>Entregas</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Proyecto Final React</td>
+                                        <td>Tarea</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2" data-bs-toggle="modal"
+                                                data-bs-target="#verExamenModal"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-black"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Examen Parcial JavaScript</td>
+                                        <td>Examen</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-black"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Práctica Node.js API</td>
+                                        <td>Tarea</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-black"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quiz Base de Datos</td>
+                                        <td>Quiz</td>
+                                        <td>2024-03-25</td>
+                                        <td>28/45</td>
+                                        <td>
+                                            <i class="bi bi-eye me-2"></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
+                                            <i class="bi bi-trash text-black"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Calificaciones -->
+                    <div class="tab-pane fade" id="calificaciones">
+
+                        <!-- Buscador -->
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Buscar Estudiante">
+                            </div>
+                        </div>
+
+                        <!-- Tabla de Calificaciones -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle table-hover text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Nota 1</th>
+                                        <th>Nota 2</th>
+                                        <th>Nota 3</th>
+                                        <th>Promedio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>María Lopez</td>
+                                        <td>85</td>
+                                        <td>85</td>
+                                        <td>85</td>
+                                        <td>85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan Pérez</td>
+                                        <td>90</td>
+                                        <td>80</td>
+                                        <td>88</td>
+                                        <td>86</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ana Torres</td>
+                                        <td>78</td>
+                                        <td>85</td>
+                                        <td>80</td>
+                                        <td>81</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carlos Ruiz</td>
+                                        <td>95</td>
+                                        <td>92</td>
+                                        <td>90</td>
+                                        <td>92</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </main>
+            <!--MODALESSSSSSS    -->
+
+            <!--Agregar estudiantes -->
+            <div class="modal fade" id="modalAlumnos" tabindex="-1">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alumnos Disponibles para este Curso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <!-- etiquetas -->
+                                <div id="alumnosSeleccionados" class="mb-3">
+                                    <!--  alumnos -->
+                                </div>
+
+                                <!-- barra de busqueda -->
+                                <nav class="navbar navbar-light bg-light mt-3">
+                                    <div class="container-fluid">
+                                        <input id="searchAlumno" class="form-control" type="search"
+                                            placeholder="Buscar alumno..." aria-label="Search">
+                                    </div>
+                                </nav>
+
+                                <!-- tabla -->
+                                <div class="table-responsive mt-3">
+                                    <table class="table table-bordered text-center table-hover align-middle">
+                                        <thead class="table-secondary">
+                                            <tr>
+                                                <th>Alumno</th>
+                                                <th>Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tablaAlumnos">
+                                            <!-- RENDER-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-lg"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary btn-lg">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--VER estudiante-->
+            <div class="modal fade" id="modalVer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalVerLabel">Detalles del Estudiante</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Correo:</strong> juanperez@correo.com</p>
+                            <p><strong>Estado:</strong> Activo</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- EDITAR estudiante-->
+            <div class="modal fade" id="modalEditar" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalEditarLabel">Editar Estudiante</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="editarNombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="editarNombre" value="Juan Pérez">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editarCorreo" class="form-label">Correo</label>
+                                    <input type="email" class="form-control" id="editarCorreo"
+                                        value="juanperez@correo.com">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ELIMINAR estudiante-->
+            <div class="modal fade" id="modalEliminar" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title text-danger" id="modalEliminarLabel">Confirmar Eliminación</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            ¿Estás seguro de que deseas eliminar a <strong>Juan Pérez</strong> del curso?
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--Agregar tarea -->
+            <div class="modal fade" id="modalTarea" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTareaLabel">Crear Tarea</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+
+                        <!-- Body con el formulario -->
+                        <div class="modal-body">
+                            <form class="row g-3">
+
+                                <!-- Título -->
+                                <div class="col-6">
+                                    <label for="titulo-tarea" class="form-label">Título de la Tarea *</label>
+                                    <input type="text" class="form-control" id="titulo-tarea"
+                                        placeholder="Proyecto de React Component" required />
+                                </div>
+
+                                <!-- Fecha límite -->
+                                <div class="col-6">
+                                    <label for="fecha-limite" class="form-label">Fecha Límite *</label>
+                                    <input type="date" class="form-control" id="fecha-limite" required />
+                                </div>
+
+                                <!-- Descripción -->
+                                <div class="col-12">
+                                    <label for="descripcion" class="form-label">Descripción de la Tarea</label>
+                                    <textarea class="form-control" id="descripcion" rows="3"
+                                        placeholder="Describe el contenido y objetivos de la lección..."></textarea>
+                                </div>
+
+                                <!-- Instrucciones -->
+                                <div class="col-12">
+                                    <label for="instrucciones" class="form-label">Instrucciones Detalladas</label>
+                                    <textarea class="form-control" id="instrucciones" rows="3"
+                                        placeholder="Proporciona instrucciones paso a paso para resolver la tarea..."></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Footer con botones -->
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar Tarea</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--Agregar evaluacion -->
+            <div class="modal fade" id="examenModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="crearExamenModalLabel">Crear Examen</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <form class="row g-3">
+                                <!-- inputs de titulo, curso, fecha - hora y puntuación -->
+                                <div class="col-6">
+                                    <label for="tittle-input" class="form-label">Título del Examen *</label>
+                                    <input type="text" class="form-control" id="tittle-input"
+                                        placeholder="Examen principal de JavaScript" />
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="fecha-input" class="form-label">Fecha y Hora del Examen *</label>
+                                    <input type="text" class="form-control" id="fecha-input"
+                                        placeholder="dd/mm/aaaa --:--" />
+                                </div>
+
+
+                                <!-- Cuadro de texto -->
+                                <div class="col-12">
+                                    <label for="descripcion" class="form-label">Descripción del Examen</label>
+                                    <textarea class="form-control" id="descripcion" rows="3"
+                                        placeholder="Describe el contenido y objetivos del examen..."></textarea>
+                                </div>
+                                <!-- Bloque de preguntas -->
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <h4 class="text-start">Preguntas</h4>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" id="addPreguntaBtn">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+
+                                <div id="preguntas">
+                                    <div class="pregunta mb-3" id="pregunta1">
+                                        <div class="col-12 mb-2">
+                                            <label for="pregunta-input-1" class="form-label">Pregunta 1</label>
+                                            <input type="text" class="form-control" id="pregunta-input-1"
+                                                placeholder="Escribe tu pregunta aquí..." />
+                                        </div>
+
+                                        <!-- Opciones -->
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" aria-label="Checkbox para opción 1">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Opción 1">
+                                        </div>
+
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" aria-label="Checkbox para opción 2">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Opción 2">
+                                        </div>
+
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" aria-label="Checkbox para opción 3">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Opción 3">
+                                        </div>
+
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" aria-label="Checkbox para opción 4">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Opción 4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar Examen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Ver evaluacion -->
+            <div class="modal fade" id="verExamenModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="verExamenModalLabel">Detalles del Examen</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <!-- Título y fecha -->
+                            <div class="mb-3">
+                                <h4 id="verTituloExamen">Examen principal de JavaScript</h4>
+                                <p class="text-muted mb-1"><strong>Fecha y Hora:</strong> <span
+                                        id="verFechaExamen">12/09/2025 10:00 AM</span></p>
+                                <p class="text-muted mb-1"><strong>Puntuación Total:</strong> <span
+                                        id="verPuntosExamen">100</span></p>
+                            </div>
+
+                            <!-- Descripción -->
+                            <div class="mb-3">
+                                <h5>Descripción</h5>
+                                <p id="verDescripcionExamen">
+                                    Este examen evalúa los conocimientos fundamentales de JavaScript incluyendo
+                                    variables, funciones, arreglos y manipulación del DOM.
+                                </p>
+                            </div>
+
+                            <!-- Preguntas -->
+                            <div>
+                                <h5>Preguntas</h5>
+
+                                <div class="mb-4">
+                                    <p><strong>1. ¿Qué es JavaScript?</strong></p>
+                                    <ul>
+                                        <li>Lenguaje de programación <span class="badge bg-success">Correcta</span></li>
+                                        <li>Una base de datos</li>
+                                        <li>Un sistema operativo</li>
+                                        <li>Un procesador de texto</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mb-4">
+                                    <p><strong>2. ¿Cuál es la forma correcta de declarar una variable?</strong></p>
+                                    <ul>
+                                        <li>var x = 10; <span class="badge bg-success">Correcta</span></li>
+                                        <li>variable x = 10;</li>
+                                        <li>x := 10;</li>
+                                        <li>int x = 10;</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Agregar modulo  -->
+            <div class="modal fade" id="crearModuloModal" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="crearLeccionModalLabel">Crear Lección</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3">
+                                <!-- inputs de titulo, curso, duracion -->
+                                <div class="col-6">
+                                    <label for="titulo-input" class="form-label">Título de la Lección *</label>
+                                    <input type="text" class="form-control" id="titulo-input"
+                                        placeholder="Introducción a React component" />
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="curso-select" class="form-label">Seleccione el Curso *</label>
+                                    <select id="curso-select" class="form-select form-select-sm">
+                                        <option selected disabled>Seleccione el Curso</option>
+                                        <option value="1">Software</option>
+                                        <option value="2">Inglés</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="duracion-input" class="form-label">Duración Estimada *</label>
+                                    <input type="text" class="form-control" id="duracion-input"
+                                        placeholder="25 Minutos" />
+                                </div>
+
+                                <!-- Descripción -->
+                                <div class="col-12">
+                                    <label for="descripcion-area" class="form-label">Descripción de la Lección</label>
+                                    <textarea class="form-control" id="descripcion-area" rows="3"
+                                        placeholder="Describe el contenido y objetivos de la Lección..."></textarea>
+                                </div>
+
+                                <!-- Contenido -->
+                                <div class="col-12">
+                                    <label for="contenido-area" class="form-label">Contenido</label>
+                                    <textarea class="form-control" id="contenido-area" rows="3"
+                                        placeholder="Escribe el contenido de la Lección..."></textarea>
+                                </div>
+
+                                <h5 class="mt-3">Material de Apoyo</h5>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="nombre-input" class="form-label">Nombre *</label>
+                                        <input type="text" class="form-control" id="nombre-input"
+                                            placeholder="Ej: Documento PDF, Video Introductorio">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="link-input" class="form-label">Link *</label>
+                                        <input type="text" class="form-control" id="link-input"
+                                            placeholder="https://...">
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <button id="agregar-btn" class="btn btn-outline-primary btn-sm">Agregar
+                                            Material</button>
+                                    </div>
+                                </div>
+
+                                <!-- Lista de Materiales -->
+                                <div class="mt-4">
+                                    <h6>Materiales Agregados:</h6>
+                                    <ul class="list-group" id="lista-materiales">
+                                        <!-- Aquí se agregarán dinámicamente -->
+                                    </ul>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar Lección</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ver modulo -->
+            <div class="modal fade" id="verLeccionModal" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Detalles de la Lección</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3">
+                                <!-- Información principal -->
+                                <div class="col-6">
+                                    <p><strong>Título:</strong> <span id="ver-titulo">Introducción a React</span></p>
+                                </div>
+
+                                <div class="col-6">
+                                    <p><strong>Duración:</strong> <span id="ver-duracion">25 Minutos</span></p>
+                                </div>
+
+                                <!-- Descripción -->
+                                <div class="col-12">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p id="ver-descripcion">Describe el contenido y objetivos de la lección...</p>
+                                </div>
+
+                                <!-- Contenido -->
+                                <div class="col-12">
+                                    <p><strong>Contenido:</strong></p>
+                                    <p id="ver-contenido">Explicación de componentes, props y estado...</p>
+                                </div>
+
+                                <!-- Material de Apoyo -->
+                                <div class="col-12">
+                                    <p><strong>Material de Apoyo:</strong></p>
+                                    <ul class="list-group" id="ver-materiales">
+                                        <li class="list-group-item">
+                                            <strong>PDF Introducción:</strong>
+                                            <a href="https://ejemplo.com/doc.pdf"
+                                                target="_blank">https://ejemplo.com/doc.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <strong>Video Explicativo:</strong>
+                                            <a href="https://youtu.be/tCHYrpiqDxI"
+                                                target="_blank">https://youtu.be/tCHYrpiqDxI</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../scripts/main.js"></script>
+<script src="../../scripts/agregarMaterial.js"></script>
+
+</html>
