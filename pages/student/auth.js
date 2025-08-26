@@ -1,17 +1,18 @@
-function checkAuth(rolPermitido = "Administrador") {
+function checkAuth(rolPermitido = "Estudiante") {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
+  console.log(usuario);
 
   if (!usuario) {
     window.location.href = "../../index.html";
     return;
   }
 
-  if (!rolPermitido == usuario.tipo) {
+  if (rolPermitido != usuario.tipo) {
     window.location.href = "./dashboard.html";
     return;
   }
 }
-document.addEventListener('DOMContentLoaded',  function () {
+document.addEventListener('DOMContentLoaded',function () {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
   document

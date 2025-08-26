@@ -1,4 +1,4 @@
-function checkAuth(rolPermitido = "Administrador") {
+function checkAuth(rolPermitido = "Docente") {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
   if (!usuario) {
@@ -11,7 +11,7 @@ function checkAuth(rolPermitido = "Administrador") {
     return;
   }
 }
-document.addEventListener('DOMContentLoaded',  function () {
+document.addEventListener('DOMContentLoaded',function () {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
   document
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded',  function () {
     .querySelectorAll(".dropdown-correo")
     .forEach((el) => (el.textContent = usuario["correo"]));
 
-  document.getElementById("btnLogout").addEventListener("click", function () {
+  document.getElementById("btnPerfil").addEventListener("click", function () {
     localStorage.removeItem("usuario");
     window.location.href = "../../index.html";
   });
-
+document.querySelectorAll('btnPerfil').forEach(()=>{
+  
+})
   //===============================000===============================//
   checkAuth()
 });
-
-
