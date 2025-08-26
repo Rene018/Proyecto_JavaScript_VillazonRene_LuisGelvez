@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(data);
             if (data.length > 0) {
               const user = data[0];
-              localStorage.setItem("usuario", JSON.stringify(data[0])); 
+              localStorage.setItem("usuario", JSON.stringify(data[0]));
               if (user["tipo"] == "Estudiante") {
                 window.location.href = "./pages/student/dashboard.html";
               } else if (user["tipo"] == "Docente") {
