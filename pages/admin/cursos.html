@@ -102,11 +102,6 @@
                         data-bs-target="#modalCurso">
                         Agregar Curso
                     </button>
-
-                    <!-- Modal -->
-
-
-
                 </div>
                 <div class="container ">
                     <div class="row container mb-4">
@@ -166,7 +161,7 @@
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table-body">
                                 <tr>
                                     <td>Desarrollo web con React</td>
                                     <td>Programación</td>
@@ -197,7 +192,7 @@
         <!-- MODALESSSSSSSSS   -->
         <!-- Modal Crear Curso -->
         <div class="modal fade" id="modalCurso" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-            role="dialog" aria-labelledby="modalCursoLabel" aria-hidden="true">
+            role="dialog">
 
             <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
@@ -207,125 +202,132 @@
                         <h5 class="modal-title fw-bold" id="modalCursoLabel">Agregar Curso</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <form id="form-curso" action="">
+                        <!-- Cuerpo con tu formulario -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row g-3">
 
-                    <!-- Cuerpo con tu formulario -->
-                    <div class="modal-body">
-                        <div class="container">
-                            <form class="row g-3">
+                                    <!-- Título y categoría -->
+                                    <div class="col-6">
+                                        <label for="tittle-input" class="form-label">Título del Curso *</label>
+                                        <input type="text" class="form-control" id="tittle-input"
+                                            placeholder="Desarrollo web" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="categoria-input" class="form-label">Categoría *</label>
+                                        <input type="text" class="form-control" id="categoria-input"
+                                            placeholder="Programación" />
+                                    </div>
 
-                                <!-- Título y categoría -->
-                                <div class="col-6">
-                                    <label for="tittle-input" class="form-label">Título del Curso *</label>
-                                    <input type="text" class="form-control" id="tittle-input"
-                                        placeholder="Desarrollo web" />
-                                </div>
-                                <div class="col-6">
-                                    <label for="categoria-input" class="form-label">Categoría *</label>
-                                    <input type="text" class="form-control" id="categoria-input"
-                                        placeholder="Programación" />
-                                </div>
+                                    <!-- Descripción -->
+                                    <div class="col-12">
+                                        <label for="text-area" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="descripcion-input" rows="3"
+                                            placeholder="Aprende a desarrollar aplicaciones web modernas con React..."></textarea>
+                                    </div>
 
-                                <!-- Descripción -->
-                                <div class="col-12">
-                                    <label for="text-area" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="text-area" rows="3"
-                                        placeholder="Aprende a desarrollar aplicaciones web modernas con React..."></textarea>
-                                </div>
+                                    <!-- Duración y docente -->
+                                    <div class="col-6">
+                                        <label for="duracion-input" class="form-label">Duración *</label>
+                                        <input type="text" class="form-control" id="duracion-input"
+                                            placeholder="12 Semanas" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="docente-input" class="form-label">Docente Asignado *</label>
+                                        <select class="form-select form-control" name="docente-input"
+                                            id="docente-input">
+                                            <option value="" disabled selected>Selecciona un docente</option>
+                                        </select>
+                                    </div>
 
-                                <!-- Duración y docente -->
-                                <div class="col-6">
-                                    <label for="duracion-input" class="form-label">Duración *</label>
-                                    <input type="text" class="form-control" id="duracion-input"
-                                        placeholder="12 Semanas" />
+                                    <!-- Etiquetas -->
+                                    <div class="col-12">
+                                        <label for="etiquetas" class="form-label">Etiquetas</label>
+                                        <input type="text" class="form-control" id="etiquetas"
+                                            placeholder="Selecciona las etiquetas" />
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <label for="docente-input" class="form-label">Docente Asignado *</label>
-                                    <input type="text" class="form-control" id="docente-input"
-                                        placeholder="Dr. Ana García" />
-                                </div>
-
-                                <!-- Etiquetas -->
-                                <div class="col-12">
-                                    <label for="etiquetas" class="form-label">Etiquetas</label>
-                                    <input type="text" class="form-control" id="etiquetas"
-                                        placeholder="Selecciona las etiquetas" />
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Añadir</button>
-                    </div>
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Añadir</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
         <!-- Modal Editar -->
         <div class="modal fade" id="modalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-            role="dialog" aria-labelledby="modalCursoLabel" aria-hidden="true">
+            role="dialog">
 
             <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
 
                     <!-- Encabezado -->
                     <div class="modal-header">
-                        <h5 class="modal-title fw-bold" id="modalCursoLabel">Editar Curso</h5>
+                        <h5 class="modal-title fw-bold">Editar Curso</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <form id="form-curso-edit" action="">
+                        <!-- Cuerpo con tu formulario -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row g-3">
 
-                    <!-- Cuerpo con tu formulario -->
-                    <div class="modal-body">
-                        <div class="container">
-                            <form class="row g-3">
+                                    <!-- Título y categoría -->
+                                    <div class="col-6">
+                                        <label for="tittle-input-edit" class="form-label">Título del Curso *</label>
+                                        <input type="text" class="form-control" id="tittle-input-edit"
+                                            placeholder="Desarrollo web" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="categoria-input-edit" class="form-label">Categoría *</label>
+                                        <input type="text" class="form-control" id="categoria-input-edit"
+                                            placeholder="Programación" />
+                                    </div>
 
-                                <!-- Título y categoría -->
-                                <div class="col-6">
-                                    <label for="tittle-input" class="form-label">Título del Curso *</label>
-                                    <input type="text" class="form-control" id="tittle-input"
-                                        placeholder="Desarrollo web" />
-                                </div>
-                                <div class="col-6">
-                                    <label for="categoria-input" class="form-label">Categoría *</label>
-                                    <input type="text" class="form-control" id="categoria-input"
-                                        placeholder="Programación" />
-                                </div>
+                                    <!-- Descripción -->
+                                    <div class="col-12">
+                                        <label for="descripcion-input-edit" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="descripcion-input-edit" rows="3"
+                                            placeholder="Aprende a desarrollar aplicaciones web modernas con React..."></textarea>
+                                    </div>
 
-                                <!-- Descripción -->
-                                <div class="col-12">
-                                    <label for="text-area" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="text-area" rows="3"
-                                        placeholder="Aprende a desarrollar aplicaciones web modernas con React..."></textarea>
-                                </div>
+                                    <!-- Duración y docente -->
+                                    <div class="col-6">
+                                        <label for="duracion-input-edit" class="form-label">Duración *</label>
+                                        <input type="text" class="form-control" id="duracion-input-edit"
+                                            placeholder="12 Semanas" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="docente-input-edit" class="form-label">Docente Asignado *</label>
+                                        <select class="form-select" name="docente-input-edit" id="docente-input-edit">
 
-                                <!-- Duración y docente -->
-                                <div class="col-6">
-                                    <label for="duracion-input" class="form-label">Duración *</label>
-                                    <input type="text" class="form-control" id="duracion-input"
-                                        placeholder="12 Semanas" />
-                                </div>
-                                <div class="col-6">
-                                    <label for="docente-input" class="form-label">Docente Asignado *</label>
-                                    <input type="text" class="form-control" id="docente-input"
-                                        placeholder="Dr. Ana García" />
-                                </div>
+                                            <option value="" disabled selected>Selecciona un docente</option>
+                                        </select>
+                                    </div>
 
-                                <!-- Etiquetas -->
-                                <div class="col-12">
-                                    <label for="etiquetas" class="form-label">Etiquetas</label>
-                                    <input type="text" class="form-control" id="etiquetas"
-                                        placeholder="Selecciona las etiquetas" />
+                                    <!-- Etiquetas -->
+                                    <div class="col-12">
+                                        <label for="etiquetas-edit" class="form-label">Etiquetas</label>
+                                        <input type="text" class="form-control" id="etiquetas-edit"
+                                            placeholder="Selecciona las etiquetas" />
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Actualizar Curso</button>
-                    </div>
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" id="btn-submit-curso">Guardar Cambios</button>
+
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -356,5 +358,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script src="../../scripts/mainCurso.js"></script>
+<script src="../../scripts/editarCurso.js"></script>
+<script src="../../scripts/eliminarCurso.js"></script>
 
 </html>

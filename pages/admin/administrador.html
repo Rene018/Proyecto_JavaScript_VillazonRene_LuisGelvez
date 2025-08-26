@@ -161,6 +161,7 @@
                             </div>
                         </form>
                     </div>
+                    <!-- Usuarios -->
                     <div class="tab-pane fade" id="usuarios">
                         <div class="d-flex mb-3 gap-2">
                             <input type="text" class="form-control" placeholder="Buscar Usuario">
@@ -183,7 +184,7 @@
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tabla-users">
                                 <tr>
                                     <td>María González</td>
                                     <td>STU001</td>
@@ -211,7 +212,7 @@
                 </div>
             </main>
         </div>
-
+        <!-- Modalesssss -->
 
         <!-- Agregar Usuario -->
         <div class="modal fade" id="agregarUsuarioModal" tabindex="-1">
@@ -232,41 +233,45 @@
                             <h6 class="mb-2">Información del Usuario</h6>
                             <div class="col-md-6">
                                 <label class="form-label">Nombre Completo *</label>
-                                <input type="text" class="form-control" placeholder="Juan Pérez">
+                                <input id="nombre-input" type="text" class="form-control" placeholder="Juan Pérez">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Correo Electrónico *</label>
-                                <input type="email" class="form-control" placeholder="juan.perez@university.edu">
+                                <input id="correo-input" type="email" class="form-control"
+                                    placeholder="juan.perez@university.edu">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Número de Teléfono *</label>
-                                <input type="text" class="form-control" placeholder="+57 300 123 4567">
+                                <input id="telefono-input" type="text" class="form-control"
+                                    placeholder="+57 300 123 4567">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Dirección *</label>
-                                <input type="text" class="form-control" placeholder="Cra 45 #23-10">
+                                <input id="direccion-input" type="text" class="form-control"
+                                    placeholder="Cra 45 #23-10">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Título Académico</label>
-                                <input type="text" class="form-control" placeholder="Licenciatura, Maestría...">
+                                <input id="tituloAcademico-input" type="text" class="form-control"
+                                    placeholder="Licenciatura, Maestría...">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Tipo de Usuario *</label>
-                                <select class="form-select">
+                                <select id="tipo-input" class="form-select">
                                     <option selected disabled>Seleccionar...</option>
-                                    <option>Estudiante</option>
-                                    <option>Profesor</option>
-                                    <option>Administrador</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                    <option value="Docente">Docente</option>
+                                    <option value="Administrador">Administrador</option>
                                 </select>
                             </div>
-                        </form>
+
                     </div>
                     <!-- Footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" form="formAgregarUsuario" class="btn btn-primary">Guardar Usuario</button>
                     </div>
-
+                    </form>
                 </div>
             </div>
         </div>
@@ -323,53 +328,67 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
 
+                    <!-- Header -->
                     <div class="modal-header">
                         <h5 class="modal-title">Editar Usuario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
 
+                    <!-- Body -->
                     <div class="modal-body">
                         <form id="formEditarUsuario" class="row g-3">
+
+                            <!-- Información del usuario -->
                             <h6 class="mb-2">Información del Usuario</h6>
                             <div class="col-md-6">
                                 <label class="form-label">Nombre Completo *</label>
-                                <input type="text" class="form-control" value="Juan Pérez">
+                                <input id="edit-nombre" type="text" class="form-control" placeholder="Juan Pérez">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Correo Electrónico *</label>
-                                <input type="email" class="form-control" value="juan.perez@university.edu">
+                                <input id="edit-correo" type="email" class="form-control"
+                                    placeholder="juan.perez@university.edu">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Número de Teléfono *</label>
-                                <input type="text" class="form-control" value="+57 300 123 4567">
+                                <input id="edit-telefono" type="text" class="form-control"
+                                    placeholder="+57 300 123 4567">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Dirección *</label>
-                                <input type="text" class="form-control" value="Cra 45 #23-10">
+                                <input id="edit-direccion" type="text" class="form-control" placeholder="Cra 45 #23-10">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Título Académico</label>
-                                <input type="text" class="form-control" value="Maestría">
+                                <input id="edit-tituloAcademico" type="text" class="form-control"
+                                    placeholder="Licenciatura, Maestría...">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Tipo de Usuario *</label>
-                                <select class="form-select">
-                                    <option>Estudiante</option>
-                                    <option selected>Profesor</option>
-                                    <option>Administrador</option>
+                                <select id="edit-tipo" class="form-select">
+                                    <option selected disabled>Seleccionar...</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                    <option value="Docente">Docente</option>
+                                    <option value="Administrador">Administrador</option>
                                 </select>
                             </div>
+
                         </form>
                     </div>
 
+                    <!-- Footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" form="formEditarUsuario" class="btn btn-primary">Actualizar
-                            Usuario</button>
+                        <button id="btn-submit-usuario" type="submit" form="formEditarUsuario" class="btn btn-primary">
+                            Guardar Cambios
+                        </button>
                     </div>
+
                 </div>
             </div>
         </div>
+
+
 
         <!-- ELIMINAR USUARIO -->
         <div class="modal fade" id="eliminarUsuarioModal" tabindex="-1">
@@ -382,7 +401,8 @@
                     </div>
 
                     <div class="modal-body">
-                        <p>¿Estás seguro de que deseas eliminar al usuario <strong>Juan Pérez</strong>? Esta acción no
+                        <p>¿Estás seguro de que deseas eliminar al usuario <strong id="nombre-usuario">Juan
+                                Pérez</strong>? Esta acción no
                             se puede deshacer.</p>
                     </div>
 
@@ -396,9 +416,13 @@
 
 
     </div>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script src="../../scripts/usuarios/mainUsusarios.js"></script>
+<script src="../../scripts/usuarios/crearUsusarios.js"></script>
+<script src="../../scripts/usuarios/editarUsusarios.js"></script>
+<script src="../../scripts/usuarios/eliminarUsuarios.js"></script>
 
 </html>

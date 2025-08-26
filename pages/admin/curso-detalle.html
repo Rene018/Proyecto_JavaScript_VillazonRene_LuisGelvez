@@ -137,30 +137,14 @@
                                 <div class="card shadow-sm border-0">
                                     <div class="card-body">
                                         <h2 class="h5 fw-bold text-dark mb-3">Información del curso</h2>
-                                        <p class="text-muted mb-4">
+                                        <p id="info-curso" class="text-muted mb-4">
                                             Aprende a desarrollar aplicaciones web modernas con React, incluyendo
                                             hooks,
                                             context, routing y mejores prácticas de desarrollo.
                                         </p>
 
-                                        <!-- Objetivos -->
-                                        <h3 class="h6 fw-semibold text-secondary mb-3">Objetivos de Aprendizaje</h3>
-                                        <ul class="list-unstyled text-muted mb-4">
-                                            <li class="mb-2">Dominar
-                                                los conceptos principales de React</li>
-                                            <li class="mb-2">Implementar
-                                                hooks
-                                                y
-                                                context para manejo de estado</li>
-                                            <li class="mb-2">Crear
-                                                aplicaciones responsive y accesibles</li>
-                                            <li></i>Aplicar
-                                                mejores
-                                                prácticas de desarrollo frontend</li>
-                                        </ul>
-
                                         <!-- Tags -->
-                                        <div>
+                                        <div id="tags">
                                             <span class="badge bg-secondary text-white me-2">React</span>
                                             <span class="badge bg-secondary text-white me-2">JavaScript</span>
                                             <span class="badge bg-secondary text-white">Frontend</span>
@@ -244,19 +228,15 @@
                                         <ul class="list-unstyled mb-0 text-muted">
                                             <li class="d-flex justify-content-between mb-2">
                                                 <span>Estudiantes</span>
-                                                <span class="fw-bold text-dark">45</span>
+                                                <span id="cant-estudiantes" class="fw-bold text-dark">45</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-2">
                                                 <span>Activos</span>
-                                                <span class="fw-bold text-dark">42</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between mb-2">
-                                                <span>Lecciones</span>
-                                                <span class="fw-bold text-dark">39</span>
+                                                <span id="cant-estudiantes-activos" class="fw-bold text-dark">42</span>
                                             </li>
                                             <li class="d-flex justify-content-between">
                                                 <span>Módulos</span>
-                                                <span class="fw-bold text-dark">39</span>
+                                                <span id="cant-modulos" class="fw-bold text-dark">39</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -266,10 +246,13 @@
                                 <div class="card shadow-sm border-0">
                                     <div class="card-body">
                                         <h3 class="h6 fw-bold text-dark mb-3">Detalles</h3>
-                                        <p class="mb-2"><span class="fw-semibold">Categoría:</span> Programación</p>
-                                        <p class="mb-2"><span class="fw-semibold">Docente:</span> Dra. Ana García
+                                        <p class="mb-2"><span class="fw-semibold">Categoría:</span><span
+                                                id="categoria">Programación</span> </p>
+                                        <p class="mb-2"><span class="fw-semibold">Docente:</span><span id="docente">Dra.
+                                                Ana García</span>
                                         </p>
-                                        <p><span class="fw-semibold">Duración:</span> 12 Semanas</p>
+                                        <p><span class="fw-semibold">Duración:</span><span id="duracion">12
+                                                Semanas</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -575,7 +558,7 @@
                                             </tr>
                                         </thead>
                                         <tbody id="tablaAlumnos">
-                                            <!-- RENDER-->
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -1026,5 +1009,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../scripts/main.js"></script>
 <script src="../../scripts/agregarMaterial.js"></script>
+<script src="../../scripts/detalleCursos/general/mainGeneral.js"></script>
+<script src="../../scripts/detalleCursos/estudiante/agregarEstudiante.js"></script>
 
 </html>

@@ -1,4 +1,4 @@
-async function fetchCursosActivos(enp, cont) {
+async function fetchdata(enp, cont) {
   const url = new URL(enp);
   url.searchParams.append("estado", "Activo");
   fetch(url, {
@@ -10,17 +10,17 @@ async function fetchCursosActivos(enp, cont) {
       console.log(data.length);
       document.getElementById(cont).textContent = data.length;
     });
-}
+} 
 async function cargarAll() {
-  await fetchCursosActivos(
+  await fetchdata(
     "https://68abc0057a0bbe92cbb82d40.mockapi.io/lms/cursos",
     "cant-cursos"
   );
-  await fetchCursosActivos(
+  await fetchdata(
     "https://68abc0057a0bbe92cbb82d40.mockapi.io/lms/users?tipo=Docente",
     "cant-docentes"
   );
-  await fetchCursosActivos(
+  await fetchdata(
     "https://68abc0057a0bbe92cbb82d40.mockapi.io/lms/users?tipo=Estudiante",
     "cant-estudiantes"
   );
