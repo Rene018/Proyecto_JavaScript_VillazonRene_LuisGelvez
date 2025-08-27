@@ -603,77 +603,77 @@
                 </div>
             </div>
             <!-- EDITAR estudiante-->
-            <!-- MODAL EDITAR ESTUDIANTE -->
-            <div class="modal fade" id="modalEditar" tabindex="-1">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+
+            <div class="modal fade" id="modalVer" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <!-- Header -->
                         <div class="modal-header">
-                            <h5 class="modal-title">Editar Estudiante</h5>
+                            <h5 class="modal-title">Detalles del Estudiante</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Cerrar"></button>
                         </div>
-
+<form id="formEditarEstudiante" action="">
                         <!-- Body -->
                         <div class="modal-body">
-                            <form id="formEditarEstudiante">
-                                <div class="container">
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <label for="editarNombre" class="form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="editarNombre"
-                                                placeholder="Ingrese nombre">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="editarCorreo" class="form-label">Correo</label>
-                                            <input type="email" class="form-control" id="editarCorreo"
-                                                placeholder="correo@ejemplo.com">
-                                        </div>
+                            <div class="container">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <strong>Nombre:</strong>
+                                        <p id="verNombre">Cargando...</p>
                                     </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <label for="editarTelefono" class="form-label">Teléfono</label>
-                                            <input type="text" class="form-control" id="editarTelefono"
-                                                placeholder="+57 300 000 0000">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="editarDireccion" class="form-label">Dirección</label>
-                                            <input type="text" class="form-control" id="editarDireccion"
-                                                placeholder="Dirección del estudiante">
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <label for="editarTituloAcademico" class="form-label">Título
-                                                Académico</label>
-                                            <input type="text" class="form-control" id="editarTituloAcademico"
-                                                placeholder="Ej. Ingeniería de Sistemas">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="editarTipo" class="form-label">Tipo de Usuario</label>
-                                            <select id="editarTipo" class="form-select">
-                                                <option value="Estudiante">Estudiante</option>
-                                                <option value="Docente">Docente</option>
-                                                <option value="Administrador">Administrador</option>
-                                            </select>
-                                        </div>
+                                    <div class="col-md-6">
+                                        <strong>Correo:</strong>
+                                        <p id="verCorreo">Cargando...</p>
                                     </div>
                                 </div>
-                            </form>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <strong>Teléfono:</strong>
+                                        <p id="verTelefono">Cargando...</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Dirección:</strong>
+                                        <p id="verDireccion">Cargando...</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <strong>Título Académico:</strong>
+                                        <p id="verTituloAcademico">Cargando...</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Tipo de Usuario:</strong>
+                                        <p id="verTipo">Cargando...</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <strong>Última Actividad:</strong>
+                                        <p id="verUltimaActividad">Cargando...</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Estado:</strong>
+                                        <p id="verEstado" class="fw-bold">Cargando...</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Footer -->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary btn-lg"
-                                data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" form="formEditarEstudiante" class="btn btn-primary btn-lg">Guardar
-                                Cambios</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cerrar
+                            </button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
+
 
             <!-- ELIMINAR estudiante-->
             <div class="modal fade" id="modalEliminar" tabindex="-1">

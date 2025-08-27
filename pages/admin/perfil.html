@@ -52,7 +52,9 @@
                             <ul class="dropdown-menu shadow">
                                 <li class="nav-item"><a class="nav-link text-body btnPerfil" href="./perfil.html"><i
                                             class="bi bi-person me-2"></i> Perfil</a></li>
-                                <li><a class="btnLogout" class="dropdown-item " style='text-decoration:none;color:black;' href="../../index.html"><i class="bi bi-box-arrow-right me-2"></i>
+                                <li><a class="btnLogout" class="dropdown-item "
+                                        style='text-decoration:none;color:black;' href="../../index.html"><i
+                                            class="bi bi-box-arrow-right me-2"></i>
                                         Salir</a></li>
                             </ul>
                         </div>
@@ -97,65 +99,81 @@
             </div>
 
 
-            
+
         </div>
     </div>
-    <div class="perfil">
-        <div class="fondoAlto"></div>
-        <div class="circulo"></div>
-        <h3 class="name">John Doe</h3>
-        <p class="profesion">Computer Science Student</p>
-        <div class="content">
-            <div class="content1" style="padding: 1rem;">
-                <h2 class="infoPer">Informaciòn Personal</h2>
-                <form class="row g-3">
-                    <!-- Bloque info Per -->
-                    <div class="col-4">
-                        <label for="tittle-input" class="form-label">Nombre Completo *</label>
-                        <input type="text" class="form-control" id="tittle-input" placeholder="Luis Herrera Gorroi" />
-                    </div>
-                    <div class="col-4">
-                        <label for="categoria-input" class="form-label">Email *</label>
-                        <input type="email" class="form-control" id="categoria-input"
-                            placeholder="luisherrera@.example.edu" />
-                    </div>
-                    <div class="col-4">
-                        <label for="duracion-input" class="form-label">Telefono *</label>
-                        <input type="text" class="form-control" id="duracion-input" placeholder="+57 123 456 7890" />
-                    </div>
-                    <div class="col-4">
-                        <label for="docente-input" class="form-label">Direcciòn *</label>
-                        <input type="text" class="form-control" id="docente-input" placeholder="Cll 12 #12-21" />
-                    </div>
-                </form>
+    <!-- PERFIL DE ESTUDIANTE -->
+    <div class="container py-5">
+
+        <!-- Cabecera con nombre y profesión -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <h2 class="name">John Doe</h2>
+                <p class="profesion">Estudiante</p>
             </div>
-            <div class="content2" style="padding: 1rem;">
-                <form class="row g-3">
-                    <!-- inputs de titulo y curso -->
-                    <div class="col-4">
-                        <label for="tittle-input" class="form-label">ID del Estudiante *</label>
-                        <input type="text" class="form-control" id="tittle-input" placeholder="S22025001" />
+        </div>
+
+        <div class="row">
+            <!-- Información personal -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        Información Personal
                     </div>
-                    <div class="col-4">
-                        <label for="categoria-input" class="form-label">Programa *</label>
-                        <input type="text" class="form-control" id="categoria-input"
-                            placeholder="Desarrollo de Software" />
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="nombre-input" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre-input" placeholder="Luis Herrera Gorroi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo-input" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo-input"
+                                placeholder="luisherrera@.example.edu">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono-input" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono-input" placeholder="+57 123 456 7890">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion-input" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccion-input" placeholder="Cll 12 #12-21">
+                        </div>
                     </div>
-                    <!-- Bloque de Duración, Docente asignado y etiquetas -->
-                    <div class="col-4">
-                        <label for="duracion-input" class="form-label">Fecha de Inicio *</label>
-                        <input type="text" class="form-control" id="duracion-input" placeholder="04/04/2025" />
-                    </div>
-                    <div class="col-4">
-                        <label for="docente-input" class="form-label">Fecha de Graduación Esperada *</label>
-                        <input type="text" class="form-control" id="docente-input" placeholder="04/12/2025" />
-                    </div>
-                </form>
+                </div>
             </div>
-            <button type="button" class="btn btn-primary btnGuardarCambios">Primary</button>
+
+            <!-- Información académica -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        Información Académica
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="idEstudiante-input" class="form-label">ID Estudiante</label>
+                            <input type="text" class="form-control" id="idEstudiante-input" placeholder="S22025001">
+                        </div>
+                        <div class="mb-3">
+                            <label for="programa-input" class="form-label">Programa</label>
+                            <input type="text" class="form-control" id="programa-input"
+                                placeholder="Desarrollo de Software">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaInicio-input" class="form-label">Fecha Inicio</label>
+                            <input type="text" class="form-control" id="fechaInicio-input" placeholder="04/04/2025">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaGraduacion-input" class="form-label">Fecha de Graduación</label>
+                            <input type="text" class="form-control" id="fechaGraduacion-input" placeholder="04/12/2025">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
 <script src="./auth.js"></script>
+<script src="../../scripts/perfil.js"></script>
 
 </html>

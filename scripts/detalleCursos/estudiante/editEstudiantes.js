@@ -26,7 +26,7 @@ async function cargarUsuarioEditar(usuario) {
 
 // Listener para abrir el modal y cargar datos
 document.addEventListener("click", async (e) => {
-  if (e.target.classList.contains("editar-student")) {
+  if (e.target.classList.contains("edit-student")) {
     const id = e.target.getAttribute("data-id");
     const usuario = await GetUsuario(id);
 
