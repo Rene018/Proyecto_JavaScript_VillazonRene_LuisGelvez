@@ -169,8 +169,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 5 Pendientes <br>
                 <span class="text-danger">2 Retrasadas</span>
             </td>
-            <td>${estud.nombre}%</td>
-            <td>${estud.nombre}</td>
+            <td>${estud.nombre.length}%</td>
+            <td>${estud.ultimaActividad}</td>
             <td>
                 <i data-id="${estud.id}" class="bi ver-student bi-eye me-2 text-black" role="button" data-bs-toggle="modal" data-bs-target="#modalVer"></i>
                 <i data-id="${estud.id}" class="bi  edit-student bi-pencil-square me-2 text-black" role="button" data-bs-toggle="modal" data-bs-target="#modalEditar"></i>
