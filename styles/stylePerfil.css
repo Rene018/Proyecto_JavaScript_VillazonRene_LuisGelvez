@@ -62,3 +62,9 @@
 .content1 .content2{
     padding-left:1rem ;
 }
+
+.btnGuardarCambios{
+    position: relative;
+    top: 155px;
+    left: 85%;
+}
